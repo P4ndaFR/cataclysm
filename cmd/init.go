@@ -105,7 +105,6 @@ func askPassword() (ok bool) {
 	password, err := terminal.ReadPassword(0)
 	if err != nil {
 		panic(err)
-		return
 	}
 	tmp := string(password)
 

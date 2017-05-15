@@ -1,8 +1,8 @@
 package cmd
 
 import (
-	"github.com/miton18/cataclysm/core"
 	"github.com/spf13/cobra"
+	"github.com/spf13/viper"
 )
 
 var (
@@ -65,8 +65,8 @@ func initConfig() {
 
 func run(cmd *cobra.Command, args []string) {
 
-	err := core.APIStart(listen)
+	/*err := core.APIStart(listen)
 	if err != nil {
-
-	}
+		log.panic(err)
+	}*/
 }

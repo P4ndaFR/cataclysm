@@ -6,3 +6,4 @@ import:
 - package: github.com/spf13/cobra
 - package: gopkg.in/gin-gonic/gin.v1
   version: ^1.1.4
+- package: github.com/spf13/viper

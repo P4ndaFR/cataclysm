@@ -22,7 +22,7 @@ release: $(PROJECT).go $$(call rwildcard, ./cmd, *.go)
 release-arm: export GOARCH = arm
 release-arm: export GOARM = 7
 release-arm: $(PROJECT).go $$(call rwildcard, ./cmd, *.go)
-	$(CC) $(CFLAGS) -o $(BUILD_DIR)/$(PROJECT) $(PROJECT).go
+	$(CC) $(CFLAGS) -o $(BUILD_DIR)/$(PROJECT) $(PROJECT)-arm.go
 
 .PHONY: lint
 lint:
