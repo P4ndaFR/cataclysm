@@ -1,0 +1,45 @@
+<!-- Load the Polymer.Element base class -->
+<link rel="import" href="../bower_components/polymer/polymer-element.html">
+<link rel="import" href="shared-styles.html">
+<link rel="import" href="../bower_components/paper-progress/paper-progress.html">
+
+<dom-module id="my-download-view">
+  <!-- Defines the element's style and local DOM -->
+  <template>
+    <style include="shared-styles">
+      :host {
+        display: block;
+
+        padding: 16px;
+      }
+      paper-progress {
+        width: 100%;
+      }
+      h4 {
+        position: relative;
+        left: 10px;
+        top: 10px;
+      }
+      .card {
+        padding-top: 0px;
+      }
+    </style>
+
+    <div class="card">
+      <h4>Torrent-1</h4>
+      <paper-progress value="40" secondary-progress="80"></paper-progress>
+    </div>
+    <div class="card">
+      <h4>Torrent-2</h4>
+      <paper-progress value="60" secondary-progress="70"></paper-progress>
+    </div>
+  </template>
+  <script>
+    // Your new element extends the Polymer.Element base class
+    class MyDownloadView extends Polymer.Element {
+      static get is() { return 'my-download-view'; }
+    }
+    //Now, register your new custom element so the browser can use it
+    customElements.define(MyDownloadView.is, MyDownloadView);
+  </script>
+</dom-module>

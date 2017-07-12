@@ -1,0 +1,9 @@
+package: .
+import:
+- package: github.com/anacrolix/torrent
+- package: github.com/Sirupsen/logrus
+  version: ^0.11.5
+- package: github.com/spf13/cobra
+- package: gopkg.in/gin-gonic/gin.v1
+  version: ^1.1.4
+- package: github.com/spf13/viper

@@ -1,0 +1,66 @@
+<!-- Load the Polymer.Element base class -->
+<link rel="import" href="../bower_components/polymer/polymer-element.html">
+<link rel="import" href="shared-styles.html">
+<link rel="import" href="../bower_components/paper-progress/paper-progress.html">
+<link rel="import" href="../bower_components/paper-icon-button/paper-icon-button.html">
+<link rel="import" href="../bower_components/iron-icon/iron-icon.html">
+
+<dom-module id="my-all-view">
+  <!-- Defines the element's style and local DOM -->
+  <template>
+    <style include="shared-styles">
+      :host {
+        display: block;
+
+        padding: 16px;
+      }
+      paper-progress {
+        width: 100%;
+      }
+      h4 {
+        position: relative;
+        left: 10px;
+        top: 10px;
+      }
+      .card {
+        padding-top: 0px;
+      }
+      paper-progress.blue {
+        --paper-progress-active-color: var(--paper-light-blue-500);
+        --paper-progress-secondary-color: var(--paper-light-blue-100);
+      }
+      paper-progress.grey {
+        --paper-progress-active-color: #727375;
+        --paper-progress-secondary-color: #727375;
+      }
+      /*paper-icon-button{
+        position: relative;
+        top:10;
+        right:0;
+        display: inline;
+      }*/
+    </style>
+
+    <div class="card">
+      <h4>Torrent-1</h4>
+      <paper-icon-button icon="menu"></paper-icon-button>
+      <paper-progress value=100 class="blue"></paper-progress>
+    </div>
+    <div class="card">
+      <h4>Torrent-2</h4>
+      <paper-progress value="60"></paper-progress>
+    </div>
+    <div class="card">
+      <h4>Torrent-3</h4>
+      <paper-progress value="20" class="grey"></paper-progress>
+    </div>
+  </template>
+  <script>
+    // Your new element extends the Polymer.Element base class
+    class MyAllView extends Polymer.Element {
+      static get is() { return 'my-all-view'; }
+    }
+    //Now, register your new custom element so the browser can use it
+    customElements.define(MyAllView.is, MyAllView);
+  </script>
+</dom-module>
